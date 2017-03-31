@@ -1,0 +1,34 @@
+.header {
+  height: 200px;
+  width: auto;
+  border: 1px solid black;
+}
+/** {
+  border: 1px solid black;
+}*/
+.nameContainer {
+  position: relative;
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.name {
+  position: absolute;
+  color: black;
+  height: 100px;
+  width: auto;
+  font-size: 5em;
+  top: 50px;
+}
+
+.first > .name {
+  left: 30px;
+  transform: rotate(-90deg);
+}
+
+.last > .name {
+  position: absolute;
+  left: 145px;
+  transform: rotate(90deg);
+}
