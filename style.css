@@ -2,13 +2,16 @@
   height: 200px;
   width: auto;
   border: 1px solid black;
+  height: 50vh
 }
 /** {
   border: 1px solid black;
+  box-sizing: border-box;
 }*/
+
 .nameContainer {
   position: relative;
-  height: 400px;
+  height: 200px;
   width: 300px;
   margin: 0 auto;
 }
@@ -31,4 +34,124 @@
   position: absolute;
   left: 145px;
   transform: rotate(90deg);
+}
+
+.subheader {
+  font-size: 2em;
+  height: 50vh;
+}
+
+.skill {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+  margin-left: 50px;
+  font-size: 1.5em;
+}
+.skillsHeader {
+  font-size: 2.5em;
+}
+.key {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  z-index: 2;
+}
+
+.pageTopContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  background: blue;
+}
+
+.skillsContainer {
+  position: absolute;
+  top: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background: green;
+  z-index: 1;
+}
+
+/* test */
+
+.test .key {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  z-index: 2;
+}
+
+.test .header {
+  height: 200px;
+  width: auto;
+  border: 1px solid black;
+  height: 50vh;
+}
+
+.test .nameContainer {
+  position: relative;
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.test .name {
+  position: absolute;
+  color: black;
+  height: 100px;
+  width: auto;
+  font-size: 5em;
+  top: 50px;
+}
+
+.test .first > .name {
+  left: 30px;
+  transform: rotate(-90deg);
+}
+
+.test .last > .name {
+  position: absolute;
+  left: 145px;
+  transform: rotate(90deg);
+}
+
+.test .subheader {
+  font-size: 2em;
+  height: 50vh;
+}
+
+.test .pageTopContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  background: blue;
+}
+
+.test .skillsContainer {
+  position: absolute;
+  top: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background: green;
+  z-index: 1;
+}
+
+.test .otherSkills {
+  position: absolute;
+  top: 200vh;
+  height: 100vh;
+  width: 100vw;
+  background: yellow ;
+  z-index: 3;
+}
+
+.test .skillsContainer {
+  position: relative;
+  height: auto;
+  width: auto;
 }
