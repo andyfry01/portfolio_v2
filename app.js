@@ -1,3 +1,8 @@
+/**@function resizeContainer -  resizes the sections of the page with absolutely positioned parent containers
+                                so those parents have the correct height
+  @param {object} sections - the sections of the page that require resizing on page load
+*/
+
 function resizeContainer(sections){
   for (var section in sections){
     var container = document.getElementsByClassName(sections[section].container)[0]
