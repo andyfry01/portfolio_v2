@@ -54,9 +54,17 @@
 }
 .key {
   position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.keyContainer {
+  position: relative;
   bottom: 50px;
   left: 50px;
-  z-index: 2;
+  width: 100%;
+  background: transparent;
 }
 
 .pageTopContainer {
@@ -75,82 +83,33 @@
   z-index: 1;
 }
 
-/* test */
-
-.test .key {
-  position: fixed;
-  bottom: 50px;
-  left: 50px;
-  z-index: 2;
-}
-
-.test .header {
-  height: 200px;
-  width: auto;
+.legendKey {
   border: 1px solid black;
-  height: 50vh;
+  height: 4rem;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 3px rgb(20,20,20);
 }
 
-.test .nameContainer {
-  position: relative;
-  height: 200px;
-  width: 300px;
-  margin: 0 auto;
-}
+.know {}
+.learning {}
+.favorite {}
 
-.test .name {
-  position: absolute;
-  color: black;
-  height: 100px;
-  width: auto;
-  font-size: 5em;
-  top: 50px;
-}
+@media screen and (max-width: 1090px) {
 
-.test .first > .name {
-  left: 30px;
-  transform: rotate(-90deg);
-}
+  .key {
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(transparent, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(transparent, white); /* Standard syntax */
+  }
+  .legendKey {
+    border: 1px solid black;
+    height: 4rem;
+    text-align: center;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 3px rgb(20,20,20);
+  }
 
-.test .last > .name {
-  position: absolute;
-  left: 145px;
-  transform: rotate(90deg);
-}
-
-.test .subheader {
-  font-size: 2em;
-  height: 50vh;
-}
-
-.test .pageTopContainer {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 4;
-  background: blue;
-}
-
-.test .skillsContainer {
-  position: absolute;
-  top: 100vh;
-  height: 100vh;
-  width: 100vw;
-  background: green;
-  z-index: 1;
-}
-
-.test .otherSkills {
-  position: absolute;
-  top: 200vh;
-  height: 100vh;
-  width: 100vw;
-  background: yellow ;
-  z-index: 3;
-}
-
-.test .skillsContainer {
-  position: relative;
-  height: auto;
-  width: auto;
 }

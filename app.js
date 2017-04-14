@@ -10,7 +10,6 @@ function resizeContainer(sections){
     var childHeight = child.clientHeight
     container.setAttribute('height', childHeight)
   }
-
 }
 
 var sections = {
