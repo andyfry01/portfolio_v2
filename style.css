@@ -60,11 +60,13 @@
   z-index: 2;
 }
 .keyContainer {
-  position: relative;
+  position: absolute;
+  height: 150px;
+  width: 100%;
   bottom: 50px;
   left: 50px;
-  width: 100%;
   background: transparent;
+  z-index: 3;
 }
 
 .pageTopContainer {
@@ -83,6 +85,27 @@
   z-index: 1;
 }
 
+.reveal {
+  top: 0;
+  background: green;
+  background: -webkit-linear-gradient(to bottom right, green, transparent);
+  background: -o-linear-gradient(to bottom right, green, transparent);
+  background: -moz-linear-gradient(to bottom right, green, transparent);
+  background: linear-gradient(to bottom right, green, transparent);
+}
+.conceal {
+  bottom: 0;
+  background: green;
+  background: -webkit-linear-gradient(to bottom right, transparent, green);
+  background: -o-linear-gradient(to bottom right, transparent, green);
+  background: -moz-linear-gradient(to bottom right, transparent, green);
+  background: linear-gradient(to bottom right, transparent, green);
+}
+.keyEffect {
+  position: absolute;
+  z-index: 4;
+  height: 200px;
+}
 .legendKey {
   border: 1px solid black;
   height: 4rem;
