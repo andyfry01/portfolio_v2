@@ -79,7 +79,6 @@
 
 .skillsContainer {
   position: absolute;
-  top: 100vh;
   width: 100vw;
   background: green;
   z-index: 1;
@@ -117,6 +116,13 @@
 .know {}
 .learning {}
 .favorite {}
+
+.projectsContainer {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  background: purple;
+}
 
 @media screen and (max-width: 1090px) {
 
