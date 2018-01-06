@@ -1,5 +1,6 @@
 
-@supports (display: grid) {
+
+/* @supports (display: grid) { */
   @media (min-width: 576px) {
     .name {
       display: grid;
@@ -7,6 +8,23 @@
       height: auto;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 1fr);
+      /* font-family: 'Righteous', cursive; */
+      font-family: 'Fredoka One', cursive;
+      /* font-family: 'Monoton', cursive; */
+      /* font-family: 'Fascinate', cursive; */
+      /* font-family: 'Audiowide', cursive; */
+
+    }
+
+    .name__letter:nth-child(even) {
+      border-width: 1px 0px 1px 0px;
+      border-color: black;
+      border-style: solid;
+    }
+    .name__letter:nth-child(odd) {
+      border-width: 1px 1px 1px 0px;
+      border-color: black;
+      border-style: solid;
     }
 
     .name__letter {
@@ -22,13 +40,11 @@
     }
 
     .name__letter span {
-      font-size: 20rem;
+      font-size: 15rem;
     }
-
     .name__letter--subTitle p {
       font-size: 7rem;
       margin: 0 auto;
-
     }
   }
 
@@ -44,4 +60,4 @@
 
   }
 
-}
+/* } */
