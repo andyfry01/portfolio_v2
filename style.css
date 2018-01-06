@@ -40,12 +40,30 @@
     }
 
     .name__letter span {
-      font-size: 15rem;
+      font-size: 20rem;
     }
     .name__letter--subTitle p {
       font-size: 7rem;
       margin: 0 auto;
     }
+
+    nav {
+      height: 10vh;
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+    }
+
+    nav ul li {
+      font-size: 4rem;
+      text-align: center;
+    }
+
   }
 
   @media (min-width: 768px) {
