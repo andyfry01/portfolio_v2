@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 @supports (display: grid) {
   @media (min-width: 576px) {
 
@@ -88,6 +92,77 @@
     section.porfolio__personal {
       height: 100vh;
       width: 100vw;
+    }
+
+    .projectArea {
+      /* font-family: 'PT Mono', monospace; */
+      font-family: 'Ubuntu', sans-serif;
+      padding: 30px;
+      height: 200vh;
+      width: 100%;
+    }
+
+    .projectArea__projectContainer {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 20% 40% 40%;
+      grid-row-gap: 30px;
+      height: 50%;
+      width: 100%;
+      border: 2px solid black;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+      padding: 10px 30px;
+    }
+
+    .projectArea__projectName {
+      font-size: 7rem;
+      text-align: center;
+      border-bottom: 1px solid black;
+    }
+
+    .projectArea__projectScreenshot {
+      margin: 0 5%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      height: 500px;
+    }
+    .projectArea__screenshotNavigation {
+      display: grid;
+      grid-template-columns: 20px 50px 1fr 50px 20px;
+      grid-template-rows: 40% 20% 40%;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .projectArea__screenshotScroller--left {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      background: black;
+    }
+    .projectArea__screenshotScroller--right {
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      background: black;
+    }
+
+    .projectArea__img {
+      max-width: 100%;
+      height: auto;
+      z-index: 1;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
     }
 
     section.about {
