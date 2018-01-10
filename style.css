@@ -212,19 +212,38 @@
       grid-row-end: 3;
       grid-column-start: 1;
       grid-column-end: 1;
-      background: white;
       overflow: scroll;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
     }
-    
+
     .projectArea__descriptionText--desc {
-      z-index: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      background: white;
     }
     .projectArea__descriptionText--tech {
-      z-index: 1;
-
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      background: white;
     }
     .projectArea__descriptionText--etc {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      background: white;
+    }
+    .onBottom {
       z-index: 0;
+    }
+    .onTop {
+      z-index: 1;
     }
 
 
