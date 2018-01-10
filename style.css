@@ -105,19 +105,24 @@
     .projectArea__projectContainer {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: 20% 40% 40%;
+      grid-template-rows: 20% 35% 40%;
       grid-row-gap: 30px;
-      height: 50%;
+      height: 90vh;
       width: 100%;
       border: 2px solid black;
       box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-      padding: 10px 30px;
+      padding: 50px 30px;
     }
 
     .projectArea__projectName {
       font-size: 7rem;
       text-align: center;
       border-bottom: 1px solid black;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
     }
 
     .projectArea__projectScreenshot {
@@ -125,6 +130,11 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+
       height: 500px;
     }
     .projectArea__screenshotNavigation {
