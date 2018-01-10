@@ -165,6 +165,59 @@
       grid-row-end: 2;
     }
 
+    .projectArea__projectDescription {
+      font-size: 3rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 10% 90%;
+      grid-row-gap: 30px;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      height: 100%;
+    }
+    .projectArea__descriptionSelector {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      margin: 0;
+      padding: 0;
+    }
+    .projectArea__descriptionSelector > li {
+      list-style: none;
+      text-align: center;
+      border: 1px solid black;
+    }
+    .projectArea__descriptionSelector > li h3 {
+      margin: 0;
+    }
+
+    .projectArea__descriptionText {
+      height: 100%;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 30px;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 1;
+      background: white;
+      overflow: scroll;
+    }
+    
+    .projectArea__descriptionText--desc {
+      z-index: 2;
+    }
+    .projectArea__descriptionText--tech {
+      z-index: 1;
+
+    }
+    .projectArea__descriptionText--etc {
+      z-index: 0;
+    }
+
+
     section.about {
       height: 100vh;
       width: 100vw;
