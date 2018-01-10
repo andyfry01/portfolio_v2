@@ -1,4 +1,4 @@
-/* @supports (display: grid) { */
+@supports (display: grid) {
   @media (min-width: 576px) {
 
     header {
@@ -8,14 +8,14 @@
     .name {
       display: grid;
       width: 100vw;
-      height: 90vh;
+      height: 92vh;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 1fr);
       /* font-family: 'Righteous', cursive; */
-      font-family: 'Fredoka One', cursive;
+      /* font-family: 'Fredoka One', cursive; */
       /* font-family: 'Monoton', cursive; */
       /* font-family: 'Fascinate', cursive; */
-      /* font-family: 'Audiowide', cursive; */
+      font-family: 'Audiowide', cursive;
     }
 
     .name__letter:nth-child(even) {
@@ -42,7 +42,7 @@
     }
 
     .name__letter span {
-      font-size: 20rem;
+      font-size: 17rem;
     }
     .name__letter--subTitle p {
       font-size: 7rem;
@@ -50,7 +50,7 @@
     }
 
     nav {
-      height: 10vh;
+      height: 8vh;
       width: 100%;
     }
 
@@ -69,9 +69,20 @@
     section.portfolio {
       height: 200vh;
       width: 100vw;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
     }
+
+    .portfolio__header {
+      height: 10vh;
+      width: 100%;
+      font-size: 4rem;
+      text-align: center;
+    }
+
     section.porfolio__professional {
-      height: 100vh;
+      height: 90vh;
       width: 100vw;
     }
     section.porfolio__personal {
@@ -98,4 +109,4 @@
 
   }
 
-/* } */
+}
