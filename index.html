@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Andy Fry</title>
+    <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Black+Ops+One|Fredoka+One|Comfortaa|Monoton|Fascinate|Righteous" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Mono|Ubuntu" rel="stylesheet">
@@ -11,9 +12,9 @@
     <header>
       <nav>
         <ul>
-          <li>PORTFOLIO</li>
-          <li>BLOG</li>
-          <li>ABOUT</li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#about">ABOUT</a></li>
         </ul>
       </nav>
 
@@ -32,12 +33,14 @@
       </div>
     </header>
     <main>
-      <section class="porfolio">
+      <section class="porfolio" id="portfolio">
         <div class="portfolio__header">
           <h1>PORTFOLIO</h1>
         </div>
         <section class="porfolio__professional">
-          <h2>PROFESSIONAL</h2>
+          <div class="portfolio__sectionHeader">
+            <h2>PROFESSIONAL</h2>
+          </div>
           <div class="projectArea">
             <div class="projectArea__projectContainer">
               <div class="projectArea__projectName">THE TITLE OF A TEST PROJECT</div>
@@ -120,10 +123,12 @@
           </div>
         </section>
         <section class="porfolio__personal">
-          <h2>PERSONAL</h2>
+          <div class="portfolio__sectionHeader">
+            <h2>PERSONAL</h2>
+          </div>
         </section>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <h2>ABOUT</h2>
       </section>
     </main>

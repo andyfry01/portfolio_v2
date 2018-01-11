@@ -1,5 +1,18 @@
+:root {
+  --red: rgb(234, 0, 47);
+  --steelyBlue: rgb(91, 140, 168);
+  --turquoise: rgb(124, 216, 219);
+  --lighterTeal: rgb(0, 173, 153);
+  --teal: rgb(0, 92, 90);
+  --white: rgb(254, 254, 255);
+}
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  background: var(--white);
 }
 
 @supports (display: grid) {
@@ -9,12 +22,16 @@
       height: 100vh;
       width: auto;
     }
+    
     .name {
       display: grid;
       width: 100vw;
-      height: 92vh;
+      height: 85vh;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 1fr);
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+      padding-right: 20px;
       /* font-family: 'Righteous', cursive; */
       /* font-family: 'Fredoka One', cursive; */
       /* font-family: 'Monoton', cursive; */
@@ -22,27 +39,22 @@
       font-family: 'Audiowide', cursive;
     }
 
-    .name__letter:nth-child(even) {
-      border-width: 1px 0px 1px 0px;
-      border-color: black;
-      border-style: solid;
-    }
-    .name__letter:nth-child(odd) {
-      border-width: 1px 1px 1px 0px;
-      border-color: black;
-      border-style: solid;
-    }
-
     .name__letter {
       width: 100%;
       height: 100%;
       text-align: center;
+      box-shadow: 5px 7px 15px var(--teal);
+      color: var(--steelyBlue);
+      background: var(--white);
     }
 
     .name__letter--subTitle {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      color: var(--red);
+      padding-top: 2.5rem;
+    }
+    .name__letter--subTitle > p {
+      margin: 0 auto;
+      width: 65%;
     }
 
     .name__letter span {
@@ -56,6 +68,12 @@
     nav {
       height: 8vh;
       width: 100%;
+      font-family: 'Ubuntu', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      box-shadow: 5px 7px 15px var(--teal);
+      margin-bottom: 2rem;
     }
 
     nav ul {
@@ -68,6 +86,21 @@
     nav ul li {
       font-size: 4rem;
       text-align: center;
+      color: var(--red);
+    }
+    nav ul li p {
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+    }
+    nav ul li a:visited {
+      color: var(--red);
+    }
+
+    main {
+      margin-top: 20rem;
     }
 
     section.portfolio {
@@ -85,12 +118,17 @@
       text-align: center;
     }
 
+    .portfolio__sectionHeader {
+      text-align: center;
+      font-size: 3rem;
+    }
+
     section.porfolio__professional {
-      height: 90vh;
+      height: 200vh;
       width: 100vw;
     }
     section.porfolio__personal {
-      height: 100vh;
+      height: 200vh;
       width: 100vw;
     }
 
