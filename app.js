@@ -89,21 +89,15 @@ function scrollPictures(picArray, direction) {
           nextPic = picArray[index - 1]
         }
       }
-      toggleClass('onBottom', currentPic)
-      toggleClass('onTop', nextPic)
+      toggleClass('onBottom', 'onTop', currentPic)
+      toggleClass('onTop', 'onBottom', nextPic)
     }
   })
 }
 
-function toggleClass(className, element) {
-  if (className === 'onTop') {
-    element.classList.remove('onBottom');
-    element.classList.add('onTop');
-    return false;
-  } else {
-    element.classList.remove('onTop');
-    element.classList.add('onBottom');
-  }
+function toggleClass(oldClass, newClass, element) {
+  element.classList.remove(oldClass);
+  element.classList.add(newClass);
 }
 
 function activateSectionTogglers() {
@@ -134,9 +128,9 @@ function addEventListeners(selectorsArray, descriptionPanels) {
         if (panel.classList.contains('onBottom')) {
           descriptionPanels[arrIndex].forEach((panel, index) => {
             if (index !== selIndex) {
-              toggleClass('onBottom', panel)
+              toggleClass('onBottom', 'onTop', panel)
             } else {
-              toggleClass('onTop', panel)
+              toggleClass('onTop', 'onBottom', panel)
             }
           })
         }
