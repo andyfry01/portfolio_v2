@@ -110,6 +110,7 @@
       height: 90vh;
       width: 100%;
       border: 2px solid black;
+      margin-bottom: 10rem;
       box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
       padding: 50px 30px;
     }
@@ -168,7 +169,6 @@
     .projectArea__img {
       max-width: 100%;
       height: auto;
-      z-index: 1;
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 1;

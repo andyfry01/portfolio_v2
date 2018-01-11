@@ -1,5 +1,6 @@
 window.onload = function(){
-  getSectionToggles()
+  activateSectionTogglers()
+  activatePictureTogglers()
 }
 
 function toArray(entries) {
@@ -91,15 +92,9 @@ function activateSectionTogglers() {
     })
 }
 
-function getChildren(items, index) {
-  return items.map(item => {
-    return { children: toArray(item.children), index: index }
-  })
-}
-
-function getProjectDescriptionArea(){
+function getSection(className){
   return new Promise((res, rej) => {
-    let projectDescriptionArea = $('.projectArea__projectDescription')
+    let projectDescriptionArea = $(className)
       res(toArray(projectDescriptionArea))
   })
 }
@@ -108,13 +103,13 @@ function addEventListeners(selectorsArray, descriptionPanels) {
   selectorsArray.forEach((group, arrIndex) => {
     group.forEach((selector, selIndex) => {
       selector.addEventListener('click', () => {
-        if ( descriptionPanels[arrIndex][selIndex].classList.contains('onBottom')) {
-          descriptionPanels[arrIndex][selIndex].classList.remove('onBottom')
-          descriptionPanels[arrIndex][selIndex].classList.add('onTop')
+        let panel = descriptionPanels[arrIndex][selIndex]
+        if (panel.classList.contains('onBottom')) {
           descriptionPanels[arrIndex].forEach((panel, index) => {
             if (index !== selIndex) {
-              panel.classList.remove('onTop')
-              panel.classList.add('onBottom')
+              toggleClass('onBottom', panel)
+            } else {
+              toggleClass('onTop', panel)
             }
           })
         }
