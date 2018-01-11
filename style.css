@@ -43,9 +43,86 @@ body {
       width: 100%;
       height: 100%;
       text-align: center;
-      box-shadow: 5px 7px 15px var(--teal);
-      color: var(--steelyBlue);
-      background: var(--white);
+      box-shadow: 5px 7px 15px var(--lightblue);
+      color: var(--darkblue);
+    }
+
+    .name__letter:nth-child(1) {
+      -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 1s; /* Firefox < 16 */
+          -ms-animation: fadein 1s; /* Internet Explorer */
+           -o-animation: fadein 1s; /* Opera < 12.1 */
+              animation: fadein 1s;
+
+    }
+    .name__letter:nth-child(2) {
+      -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 2s; /* Firefox < 16 */
+          -ms-animation: fadein 2s; /* Internet Explorer */
+           -o-animation: fadein 2s; /* Opera < 12.1 */
+              animation: fadein 2s;
+
+    }
+    .name__letter:nth-child(3) {
+      -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 3s; /* Firefox < 16 */
+          -ms-animation: fadein 3s; /* Internet Explorer */
+           -o-animation: fadein 3s; /* Opera < 12.1 */
+              animation: fadein 3s;
+
+    }
+    .name__letter:nth-child(4) {
+      -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 4s; /* Firefox < 16 */
+          -ms-animation: fadein 4s; /* Internet Explorer */
+           -o-animation: fadein 4s; /* Opera < 12.1 */
+              animation: fadein 4s;
+    }
+
+    .name__letter:nth-child(5) {
+      -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 5s; /* Firefox < 16 */
+          -ms-animation: fadein 5s; /* Internet Explorer */
+           -o-animation: fadein 5s; /* Opera < 12.1 */
+              animation: fadein 5s;
+
+    }
+    .name__letter:nth-child(6) {
+      -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 6s; /* Firefox < 16 */
+          -ms-animation: fadein 6s; /* Internet Explorer */
+           -o-animation: fadein 6s; /* Opera < 12.1 */
+              animation: fadein 6s;
+
+    }
+    .name__letter:nth-child(7) {
+      -webkit-animation: fadein 7s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 7s; /* Firefox < 16 */
+          -ms-animation: fadein 7s; /* Internet Explorer */
+           -o-animation: fadein 7s; /* Opera < 12.1 */
+              animation: fadein 7s;
+
+    }
+
+    .name__letter--subTitle {
+      -webkit-animation: fadein 8s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 8s; /* Firefox < 16 */
+          -ms-animation: fadein 8s; /* Internet Explorer */
+           -o-animation: fadein 8s; /* Opera < 12.1 */
+              animation: fadein 8s;
+
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+
+    .fadeIn {
+      -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 1s; /* Firefox < 16 */
+          -ms-animation: fadein 1s; /* Internet Explorer */
+           -o-animation: fadein 1s; /* Opera < 12.1 */
+              animation: fadein 1s;
     }
 
     .name__letter--subTitle {
@@ -304,4 +381,15 @@ body {
 
   }
 
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

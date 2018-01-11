@@ -1,6 +1,7 @@
 window.onload = function(){
   activateSectionTogglers()
   activatePictureTogglers()
+  activateScrollListener()
 }
 
 function toArray(entries) {
@@ -9,6 +10,32 @@ function toArray(entries) {
    arr.push(node)
   }
   return arr
+}
+
+function activateScrollListener(){
+  window.addEventListener('scroll', handleScroll, true)
+}
+
+function handleScroll() {
+  throttle(activateAnimation('porfolio', 'fadeIn'), 100)
+}
+
+function throttle(fn, wait) {
+  let time = Date.now();
+  return function() {
+    if ((time + wait - Date.now()) < 0) {
+      fn();
+      time = Date.now();
+    }
+  }
+}
+
+function activateAnimation(className, animationName) {
+  let elem = document.getElementsByClassName(className)[0]
+  if (elem.getBoundingClientRect().top <= window.scrollY) {
+    toggleClass('hidden', animationName, elem)
+    window.removeEventListener('scroll', handleScroll, true)
+  }
 }
 
 function activatePictureTogglers(){
