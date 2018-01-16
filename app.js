@@ -17,7 +17,7 @@ function activateScrollListener(){
 }
 
 function handleScroll() {
-  throttle(activateAnimation('porfolio', 'fadeIn'), 100)
+  throttle(activateAnimation('portfolio', 'fadeIn'), 100)
 }
 
 function throttle(fn, wait) {
@@ -89,8 +89,8 @@ function scrollPictures(picArray, direction) {
           nextPic = picArray[index - 1]
         }
       }
-      toggleClass('onBottom', 'onTop', currentPic)
-      toggleClass('onTop', 'onBottom', nextPic)
+      toggleClass('onBottom', 'onTop', nextPic)
+      toggleClass('onTop', 'onBottom', currentPic)
     }
   })
 }
@@ -128,9 +128,9 @@ function addEventListeners(selectorsArray, descriptionPanels) {
         if (panel.classList.contains('onBottom')) {
           descriptionPanels[arrIndex].forEach((panel, index) => {
             if (index !== selIndex) {
-              toggleClass('onBottom', 'onTop', panel)
-            } else {
               toggleClass('onTop', 'onBottom', panel)
+            } else {
+              toggleClass('onBottom', 'onTop', panel)
             }
           })
         }
