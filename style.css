@@ -283,8 +283,8 @@ body {
     }
     .projectArea__screenshotNavigation {
       display: grid;
-      grid-template-columns: 20px 50px 1fr 50px 20px;
-      grid-template-rows: 40% 20% 40%;
+      grid-template-columns: 70px 1fr 70px;
+      grid-template-rows: 1fr;
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 1;
@@ -295,18 +295,22 @@ body {
     }
 
     .projectArea__screenshotScroller--left {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 2;
-      grid-row-end: 3;
-      background: black;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      background: rgba(255, 255, 255, 0.5);
     }
     .projectArea__screenshotScroller--right {
-      grid-column-start: 4;
-      grid-column-end: 5;
-      grid-row-start: 2;
-      grid-row-end: 3;
-      background: black;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      background: rgba(255, 255, 255, 0.5);
+    }
+    
+    .projectArea__scrollerChevron {
+      width: 3rem;
     }
 
     .projectArea__img {
