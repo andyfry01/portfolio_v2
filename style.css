@@ -11,6 +11,14 @@
   --lightblue: rgb(0, 160,	220);
   --grey: rgb(108, 110,	112);
   --black: rgb(45, 48, 51);
+
+  --orange: rgb(254, 121, 100);
+  --orange: rgb(249, 94, 73);
+  --altRedL: rgb(200, 2, 9);
+  --altDarkBlue: rgb(71, 42, 138);
+  --altLightBlue: rgb(183, 209, 255);
+
+
 }
 
 * {
