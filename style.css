@@ -139,13 +139,11 @@ body {
               animation: fadein 1s;
     }
 
-    .name__letter--subTitle {
-      color: var(--orange);
-      /* padding-top: 2.5rem; */
-    }
     .name__letter--subTitle > p {
+      color: var(--orange);
       margin: 0 auto;
       width: 65%;
+      font-size: 10vw;
     }
 
     .name__letter span {
@@ -156,9 +154,6 @@ body {
       flex-direction: column;
       justify-content: center;
       text-align: center;
-    }
-    .name__letter--subTitle p {
-      font-size: 10vw;
     }
 
     nav {
@@ -217,6 +212,8 @@ body {
       box-shadow: 3px 5px 10px var(--black);
       border: 0.5px solid var(--black);
       letter-spacing: 0.3rem;
+      background: var(--white);
+
     }
 
     .portfolio__sectionHeader {
@@ -226,7 +223,6 @@ body {
       color: var(--altDarkBlue);
       text-decoration: underline;
       background: var(--white);
-
     }
 
     section.porfolio__professional {
@@ -246,6 +242,9 @@ body {
       font-family: 'Ubuntu', sans-serif;
       height: 200vh;
       width: 100%;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
     }
 
     .projectArea__projectContainer {
@@ -261,10 +260,12 @@ body {
       box-shadow: 3px 5px 10px var(--black);
       color: var(--black);
       background: var(--white);
+      /* grid-column-start: 1;
+      grid-column-end: 2; */
     }
 
     .projectArea__projectName {
-      font-size: 7vw;
+      font-size: 6vw;
       text-align: center;
       width: 100%;
       border-bottom: 1px solid var(--black);
@@ -332,7 +333,6 @@ body {
     }
 
     .projectArea__projectDescription {
-      font-size: 3.5vw;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 10% 90%;
@@ -344,6 +344,7 @@ body {
       height: 100%;
     }
     .projectArea__descriptionSelector {
+      font-size: 4vw;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 1fr;
@@ -360,6 +361,7 @@ body {
     }
 
     .projectArea__descriptionText {
+      font-size: 4vw;
       height: 100%;
       border: 1px solid var(--black);
       border-radius: 5px;
@@ -402,16 +404,9 @@ body {
       z-index: 1;
     }
 
-
     section.about {
       width: 100%;
-      font-size: 3.5vw;
-      background: radial-gradient(var(--orange), var(--white)),
-                  linear-gradient(90deg, blue, pink);;
-    }
-
-    .about__header {
-      background: var(--white);
+      background: radial-gradient(var(--orange), var(--white));
     }
 
     .about__textBox {
@@ -437,22 +432,106 @@ body {
       margin: 0 auto;
     }
     .about__content h3 {
-      font-size: 4vw;
+      font-size: 5vw;
       text-align: center;
     }
+    .about__content p {
+      font-size: 3.5vw;
+    }
+
+
 
   }
 
   @media (min-width: 768px) {
+    .name {
+      grid-template-columns: repeat(4, 24%);
+      grid-template-rows: repeat(4, 25%);
+    }
+    .name__letter--subTitle > p {
+      font-size: 6vw;
+    }
+    .portfolio__header, .about__header   {
+      width: 75%;
+      font-size: 3.5vw;
+    }
+    .portfolio__sectionHeader {
+      font-size: 3vw;
+    }
+    .projectArea__projectName {
+      font-size: 3.5vw;
+    }
+    .projectArea__descriptionSelector {
+      font-size: 3vw;
+    }
+    .projectArea__descriptionText {
+      font-size: 2.5vw;
+      padding: 15px;
+    }
+    .about__content h3 {
+      font-size: 4vw;
+    }
+    .about__content p {
+      font-size: 2.75vw;
+    }
+
 
   }
 
   @media (min-width: 992px) {
+    .name__letter--subTitle > p {
+      font-size: 5vw;
+    }
+
+    .projectArea {
+      grid-template-columns: repeat(2, 50%);
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      padding-right: 30px;
+    }
+    .projectArea__projectContainer {
+      margin-bottom: 0;
+    }
+    .projectArea__descriptionSelector {
+      font-size: 2.5vw;
+    }
+    .projectArea__descriptionText {
+      font-size: 2vw;
+    }
+    .about__textBox {
+      width: 75%;
+      margin: 5rem auto;
+    }
+    .about__content h3 {
+      font-size: 3.5vw;
+    }
+    .about__content p {
+      font-size: 2.5vw;
+    }
 
   }
 
   @media (min-width: 1200px) {
+    .projectArea {
+      width: 75%;
+      margin: 0 auto;
+    }
 
+    .projectArea__projectName {
+      font-size: 3vw;
+    }
+    .projectArea__descriptionSelector {
+      font-size: 2vw;
+    }
+    .projectArea__descriptionText {
+      font-size: 1.5vw;
+    }
+    .about__content h3 {
+      font-size: 3vw;
+    }
+    .about__content p {
+      font-size: 1.75vw;
+    }
   }
 
 }
