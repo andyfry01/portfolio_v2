@@ -1,4 +1,5 @@
 window.onload = function(){
+  startLogoAnimation()
   activateSectionTogglers()
   activatePictureTogglers()
   activateScrollListener()
@@ -10,6 +11,41 @@ function toArray(entries) {
    arr.push(node)
   }
   return arr
+}
+
+let logoAnimation = undefined
+
+function getNameLetters() {
+  return document.getElementsByClassName('name')[0].children
+}
+
+function startLogoAnimation(time, letterIndex) {
+  let nameLetters = getNameLetters()
+  let curTime = Date.now()
+  logoAnimation = requestAnimationFrame(() => {revealLetters(curTime, nameLetters, 0)})
+}
+
+function revealLetters(prevTime, nameLetters, curLetterIndex) {
+  // timing for animation triggers in MS
+  let animationTimes = [100, 500, 300, 300, 500, 200, 200, 450]
+  // first, check if all the letters have been animated
+  if (curLetterIndex === (nameLetters.length)) {
+    // if so, cancel animations
+    console.log('fries are done');
+    window.cancelAnimationFrame(logoAnimation)
+    return false;
+  }
+  // get interval between last animation request frame and this frame
+  let curTime = Date.now()
+  // if the right amount of time has passed, trigger fadein animation for this letter
+  if (curTime - prevTime > animationTimes[curLetterIndex]) {
+    nameLetters[curLetterIndex].classList.add('fadeIn')
+    // increment letter index to set up animation for next letter
+    logoAnimation = requestAnimationFrame(() => {revealLetters(curTime, nameLetters, curLetterIndex + 1)})
+  } else {
+    // else, wait until correct amount of time has passed
+    logoAnimation = requestAnimationFrame(() => {revealLetters(prevTime, nameLetters, curLetterIndex)})
+  }
 }
 
 function activateScrollListener(){
