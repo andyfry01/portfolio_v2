@@ -25,9 +25,10 @@ function startLogoAnimation(time, letterIndex) {
   logoAnimation = requestAnimationFrame(() => {revealLetters(curTime, nameLetters, 0)})
 }
 
+// timing for animation triggers in MS
+let animationIntervals = [100, 500, 300, 300, 500, 200, 200, 450]
+
 function revealLetters(prevTime, nameLetters, curLetterIndex) {
-  // timing for animation triggers in MS
-  let animationTimes = [100, 500, 300, 300, 500, 200, 200, 450]
   // first, check if all the letters have been animated
   if (curLetterIndex === (nameLetters.length)) {
     // if so, cancel animations
@@ -38,7 +39,7 @@ function revealLetters(prevTime, nameLetters, curLetterIndex) {
   // get interval between last animation request frame and this frame
   let curTime = Date.now()
   // if the right amount of time has passed, trigger fadein animation for this letter
-  if (curTime - prevTime > animationTimes[curLetterIndex]) {
+  if (curTime - prevTime > animationIntervals[curLetterIndex]) {
     nameLetters[curLetterIndex].classList.add('fadeIn')
     // increment letter index to set up animation for next letter
     logoAnimation = requestAnimationFrame(() => {revealLetters(curTime, nameLetters, curLetterIndex + 1)})
