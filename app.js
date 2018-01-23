@@ -79,14 +79,14 @@ function activatePictureTogglers(){
   getSection('.projectArea__projectScreenshot')
     .then(screenshotAreas => {
       let screenShotImages = screenshotAreas.map(screenshotArea => {
-        return toArray(screenshotArea.children).filter(elem => elem.tagName === "IMG")
+        return Array.from(screenshotArea.children).filter(elem => elem.tagName === "IMG")
       })
       let screenShotNavigators = screenshotAreas.map(screenshotArea => {
-        return toArray(screenshotArea.children).filter(elem => elem.tagName === "DIV")
+        return Array.from(screenshotArea.children).filter(elem => elem.tagName === "DIV")
       })
       screenShotNavigators = [].concat.apply([], screenShotNavigators)
       screenShotNavigators.forEach((navigatorSet, pictureSet) => {
-        toArray(navigatorSet.children).forEach((button, buttonIndex) => {
+        Array.from(navigatorSet.children).forEach((button, buttonIndex) => {
           let left = 0
           let right = 1
           button.addEventListener('click', () => {
@@ -141,10 +141,10 @@ function activateSectionTogglers() {
   getSection('.projectArea__projectDescription')
     .then(projectDescriptionAreas => {
       let descriptionSelectors = projectDescriptionAreas.map(project => {
-        return toArray(project.children[0].children)
+        return Array.from(project.children[0].children)
       })
       let descriptionPanels = projectDescriptionAreas.map(project => {
-        return toArray(project.children[1].children)
+        return Array.from(project.children[1].children)
       })
       addEventListeners(descriptionSelectors, descriptionPanels)
     })
@@ -153,7 +153,7 @@ function activateSectionTogglers() {
 function getSection(className){
   return new Promise((res, rej) => {
     let projectDescriptionArea = $(className)
-      res(toArray(projectDescriptionArea))
+      res(Array.from(projectDescriptionArea))
   })
 }
 
