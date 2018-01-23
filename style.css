@@ -467,6 +467,10 @@ body {
   opacity: 0;
 }
 
+.display {
+  opacity: 1;
+}
+
 .fadeIn {
   opacity: 1;
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */

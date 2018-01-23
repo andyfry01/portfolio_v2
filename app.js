@@ -5,28 +5,25 @@ window.onload = function(){
   activateScrollListener()
 }
 
-function toArray(entries) {
-  let arr = []
-  for (let node of entries) {
-   arr.push(node)
-  }
-  return arr
-}
-
 let logoAnimation = undefined
 
 function getNameLetters() {
-  return document.getElementsByClassName('name')[0].children
+  return Array.from(document.getElementsByClassName('name')[0].children)
 }
 
 function startLogoAnimation(time, letterIndex) {
   let nameLetters = getNameLetters()
-  let curTime = Date.now()
-  logoAnimation = requestAnimationFrame(() => {revealLetters(curTime, nameLetters, 0)})
+  if (window.sessionStorage.getItem('afrydevLogoAnimationTriggered') === "true") {
+    console.log(nameLetters);
+    nameLetters.forEach(letter => letter.classList.add('display'))
+  } else {
+    let curTime = Date.now()
+    logoAnimation = requestAnimationFrame(() => {revealLetters(curTime, nameLetters, 0)})
+  }
 }
 
 // timing for animation triggers in MS
-let animationIntervals = [100, 500, 300, 300, 500, 200, 200, 450]
+let animationIntervals = [100, 300, 300, 300, 250, 200, 200, 100]
 
 function revealLetters(prevTime, nameLetters, curLetterIndex) {
   // first, check if all the letters have been animated
@@ -34,6 +31,7 @@ function revealLetters(prevTime, nameLetters, curLetterIndex) {
     // if so, cancel animations
     console.log('fries are done');
     window.cancelAnimationFrame(logoAnimation)
+    window.sessionStorage.setItem('afrydevLogoAnimationTriggered', "true")
     return false;
   }
   // get interval between last animation request frame and this frame
