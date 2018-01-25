@@ -46,7 +46,14 @@
             <div class="projectArea__projectContainer">
               <div class="projectArea__projectName">BASIX STUDENT</div>
               <div class="projectArea__projectScreenshot">
-                <img class="projectArea__img onTop" src="./img/projects/basix_student/1.png" />
+                <div class="projectArea__img onTop">
+                  <a href="#img1">
+                    <img src="./img/projects/basix_student/1.png" class="thumbnail" href="#img1">
+                  </a>
+                </div>
+
+
+                <!-- <img class="projectArea__img onTop" src="./img/projects/basix_student/1.png" /> -->
                 <img class="projectArea__img onBottom" src="./img/projects/basix_student/2.png" />
                 <img class="projectArea__img onBottom" src="./img/projects/basix_student/3.png" />
                 <div class="projectArea__screenshotNavigation">
@@ -233,5 +240,11 @@
       integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
       crossorigin="anonymous"></script>
     <script src="./app.js"></script>
+
+    <!-- lightbox container hidden with CSS -->
+    <a href="#_" class="lightbox" id="img1">
+      <img src="./img/projects/basix_student/1.png">
+    </a>
+
   </body>
 </html>

@@ -209,8 +209,8 @@ body {
 
     .projectArea__projectScreenshot {
       display: grid;
-      grid-template-rows: 1fr 60% 1fr;
-      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 80% 1fr;
+      grid-template-columns: 1fr 80% 1fr;
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 2;
@@ -223,12 +223,12 @@ body {
       grid-template-columns: 70px 1fr 70px;
       grid-template-rows: 1fr;
       grid-column-start: 1;
-      grid-column-end: 2;
+      grid-column-end: 4;
       grid-row-start: 2;
       grid-row-end: 3;
       height: 100%;
       width: 100%;
-      z-index: 2;
+      z-index: 0;
     }
 
     .projectArea__screenshotScroller--left {
@@ -251,13 +251,25 @@ body {
     }
 
     .projectArea__img {
-      max-width: 100%;
-      max-height: 100%;
-      margin: 0 auto;
-      grid-column-start: 1;
-      grid-column-end: 2;
+      grid-column-start: 2;
+      grid-column-end: 3;
       grid-row-start: 2;
       grid-row-end: 3;
+      height: 100%;
+      width: 100%;
+    }
+
+    .projectArea__img img {
+      max-width: 100%;
+      height: auto;
+    }
+    .projectArea__img a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 99;
     }
 
     .projectArea__projectDescription {
@@ -553,8 +565,9 @@ body {
   }
 }
 
-
-
+.projectArea__img--lightbox {
+  display:
+}
 
 button {
   overflow: hidden;
@@ -563,4 +576,34 @@ button {
   background: transparent;
   color: rgba(0, 0, 0, .6);
   transition: all 0.3s cubic-bezier(.02, .01, .47, 1);
+}
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
 }
