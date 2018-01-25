@@ -209,19 +209,20 @@ body {
 
     .projectArea__projectScreenshot {
       display: grid;
-      grid-template-rows: 1fr 80% 1fr;
-      grid-template-columns: 1fr 80% 1fr;
+      grid-template-rows: 1fr 60% 1fr;
+      grid-template-columns: 1fr 75% 1fr;
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 2;
       grid-row-end: 3;
       height: 100%;
+      width: 100%;
     }
 
     .projectArea__screenshotNavigation {
       display: grid;
-      grid-template-columns: 70px 1fr 70px;
-      grid-template-rows: 1fr;
+      grid-template-columns: 60px 1fr 60px;
+      grid-template-rows: 1fr 50px 1fr;
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 2;
@@ -234,16 +235,18 @@ body {
     .projectArea__screenshotScroller--left {
       grid-column-start: 1;
       grid-column-end: 2;
-      grid-row-start: 1;
-      grid-row-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
       background: rgba(255, 255, 255, 0.5);
+      z-index: 5;
     }
     .projectArea__screenshotScroller--right {
       grid-column-start: 3;
       grid-column-end: 4;
-      grid-row-start: 1;
-      grid-row-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
       background: rgba(255, 255, 255, 0.5);
+      z-index: 5;
     }
 
     .projectArea__scrollerChevron {
@@ -293,6 +296,11 @@ body {
     }
     .projectArea__descriptionSelector button {
       margin: 0 5px;
+      border: 1px solid rgba(0, 0, 0, .6);
+      border-radius: 4px;
+      background: transparent;
+      color: rgba(0, 0, 0, .6);
+      transition: all 0.3s cubic-bezier(.02, .01, .47, 1);
     }
 
     .projectArea__descriptionSelector > li {
@@ -567,15 +575,6 @@ body {
 
 .projectArea__img--lightbox {
   display:
-}
-
-button {
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, .6);
-  border-radius: 4px;
-  background: transparent;
-  color: rgba(0, 0, 0, .6);
-  transition: all 0.3s cubic-bezier(.02, .01, .47, 1);
 }
 
 .lightbox {
