@@ -126,7 +126,7 @@ body {
     }
 
     .portfolio__header, .about__header   {
-      height: 20vh;
+      height: 15vw;
       width: auto;
       display: flex;
       flex-direction: column;
@@ -153,13 +153,13 @@ body {
     }
 
     section.porfolio__professional {
-      height: 200vh;
+      height: auto;
       width: 100%;
       /* background: radial-gradient(var(--altLightBlue), var(--white)); */
 
     }
     section.porfolio__personal {
-      height: 200vh;
+      height: auto;
       width: 100%;
       /* background: radial-gradient(var(--altDarkBlue), var(--white)); */
     }
@@ -178,9 +178,9 @@ body {
     .projectArea__projectContainer {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: 15% 35% 35%;
+      grid-template-rows: 5rem auto auto;
       grid-row-gap: 30px;
-      height: 80vh;
+      height: auto;
       width: 100%;
       padding: 30px;
       border: 0.5px solid var(--black);
@@ -188,8 +188,6 @@ body {
       box-shadow: 3px 5px 10px var(--black);
       color: var(--black);
       background: var(--white);
-      /* grid-column-start: 1;
-      grid-column-end: 2; */
     }
 
     .projectArea__projectName {
@@ -210,19 +208,18 @@ body {
     .projectArea__projectScreenshot {
       display: grid;
       grid-template-rows: 1fr 60% 1fr;
-      grid-template-columns: 1fr 75% 1fr;
+      grid-template-columns: 1fr 70% 1fr;
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 2;
       grid-row-end: 3;
-      height: 100%;
       width: 100%;
     }
 
     .projectArea__screenshotNavigation {
       display: grid;
-      grid-template-columns: 60px 1fr 60px;
       grid-template-rows: 1fr 50px 1fr;
+      grid-template-columns: 1fr 75% 1fr;
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 2;
@@ -239,6 +236,7 @@ body {
       grid-row-end: 3;
       background: rgba(255, 255, 255, 0.5);
       z-index: 5;
+      padding-left: 0 !important;
     }
     .projectArea__screenshotScroller--right {
       grid-column-start: 3;
@@ -247,6 +245,7 @@ body {
       grid-row-end: 3;
       background: rgba(255, 255, 255, 0.5);
       z-index: 5;
+      padding-left: 0 !important;
     }
 
     .projectArea__scrollerChevron {
@@ -258,7 +257,7 @@ body {
       grid-column-end: 3;
       grid-row-start: 2;
       grid-row-end: 3;
-      height: 100%;
+      height: auto;
       width: 100%;
     }
 
@@ -267,12 +266,12 @@ body {
       height: auto;
     }
     .projectArea__img a {
-      position: absolute;
+      /* position: absolute;
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
-      z-index: 99;
+      z-index: 99; */
     }
 
     .projectArea__projectDescription {
@@ -315,7 +314,6 @@ body {
     .projectArea__descriptionText {
       font-size: 4vw;
       height: 100%;
-      border: 1px solid var(--black);
       border-radius: 5px;
       padding: 30px;
       grid-row-start: 2;
