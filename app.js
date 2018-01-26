@@ -74,17 +74,23 @@ function activateAnimation(className, animationName) {
 }
 
 function activatePictureTogglers(){
+  // get dom nodes from projectScreenshot section
   getSection('.projectArea__projectScreenshot')
     .then(screenshotAreas => {
+      // get the images in that section
       let screenShotImages = screenshotAreas.map(screenshotArea => {
-        return Array.from(screenshotArea.children).filter(elem => elem.tagName === "IMG")
+        return Array.from(screenshotArea.children).filter((elem) => {
+          return elem.className.indexOf('projectArea__img') > -1
+        })
       })
+      // get the navigator controls in that section
       let screenShotNavigators = screenshotAreas.map(screenshotArea => {
-        return Array.from(screenshotArea.children).filter(elem => elem.tagName === "DIV")
+        return Array.from(screenshotArea.children).filter(elem => elem.className.indexOf('screenshotNavigation') > -1)
       })
-      screenShotNavigators = [].concat.apply([], screenShotNavigators)
+      // loop through screenshot navigator controls
       screenShotNavigators.forEach((navigatorSet, pictureSet) => {
-        Array.from(navigatorSet.children).forEach((button, buttonIndex) => {
+        // assign appropriate listener to each button to scroll between images
+        Array.from(navigatorSet[0].children).forEach((button, buttonIndex) => {
           let left = 0
           let right = 1
           button.addEventListener('click', () => {
