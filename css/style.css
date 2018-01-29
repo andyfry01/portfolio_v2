@@ -119,6 +119,11 @@ body {
 
     main {
       margin-top: 20rem;
+      background: url('../img/bg/bike-3.jpeg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     section.portfolio, section.about {
@@ -410,11 +415,21 @@ body {
     .name__letter--subTitle > p {
       font-size: 6vw;
     }
+    main {
+      background: url('../img/bg/mountain-2.jpeg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
     .portfolio__header, .about__header   {
       width: 75%;
       font-size: 3.5vw;
     }
     .portfolio__sectionHeader {
+      width: 75%;
+      margin: 0 auto;
       font-size: 3vw;
     }
     .projectArea__projectName {
@@ -481,13 +496,21 @@ body {
     .about__content h3 {
       font-size: 3.5vw;
     }
-    .about__content p {
-      font-size: 2.5vw;
+    .about__content p, li {
+      font-size: 2vw;
     }
 
   }
 
   @media (min-width: 1200px) {
+    main {
+      background: url('../img/bg/ny-2.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
     .projectArea {
       width: 75%;
       margin: 0 auto;
