@@ -158,39 +158,38 @@ main {
       border: 0.5px solid var(--black);
       letter-spacing: 0.3rem;
       background: var(--white);
-
     }
 
     .portfolio__sectionHeader {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 10vw;
+      width: auto;
       text-align: center;
       font-size: 4vw;
       font-family: 'Ubuntu', sans-serif;
       color: var(--altDarkBlue);
       text-decoration: underline;
       background: var(--white);
+      box-shadow: 3px 5px 10px var(--black);
     }
 
-    section.porfolio__professional {
+    section.porfolio__professional, section.porfolio__personal {
       height: auto;
       width: 100%;
-      /* background: radial-gradient(var(--altLightBlue), var(--white)); */
+      margin-top: 5rem;
 
-    }
-    section.porfolio__personal {
-      height: auto;
-      width: 100%;
-      /* background: radial-gradient(var(--altDarkBlue), var(--white)); */
     }
 
     .projectArea {
-      /* font-family: 'PT Mono', monospace; */
       font-family: 'Ubuntu', sans-serif;
-      /* height: 200vh; */
       height: auto;
       width: 100%;
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: auto;
+      margin-top: 5rem;
     }
 
     .projectArea__projectContainer {
@@ -426,6 +425,7 @@ main {
     .about__content h3 {
       font-size: 5vw;
       text-align: center;
+      margin-top: 0;
     }
     .about__content p, li {
       font-size: 3.5vw;
@@ -469,6 +469,9 @@ main {
     .projectArea__descriptionText {
       font-size: 2.75vw;
       padding: 15px;
+    }
+    .about__textBox {
+      grid-template-rows: 40vw auto auto;
     }
     .about__content h3 {
       font-size: 4vw;
@@ -541,7 +544,7 @@ main {
 
     .projectArea {
       width: 75%;
-      margin: 0 auto;
+      margin: 5rem auto;
     }
 
     .projectArea__projectName {
@@ -553,6 +556,10 @@ main {
     .projectArea__descriptionText {
       font-size: 1.5vw;
     }
+    .about__textBox {
+      grid-template-rows: 30vw auto auto;
+    }
+
     .about__content h3 {
       font-size: 3vw;
     }
