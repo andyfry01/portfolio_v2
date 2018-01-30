@@ -380,14 +380,27 @@ main {
 
     section.about {
       width: 100%;
-      /* background: radial-gradient(var(--orange), var(--white)); */
+    }
+
+    .about__iconRow {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+    }
+
+    .about__icon {
+      height: 6vw;
+      width: 6vw;
+      margin: 0 auto;
     }
 
     .about__textBox {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 20vw auto;
-      grid-row-gap: 30px;
+      grid-template-rows: 60vw auto auto;
+      grid-row-gap: 60px;
       height: auto;
       width: 100%;
       padding: 30px 7vw;
