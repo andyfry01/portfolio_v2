@@ -156,7 +156,7 @@ function activateSectionTogglers() {
 
 function getSection(className){
   return new Promise((res, rej) => {
-    let projectDescriptionArea = $(className)
+    let projectDescriptionArea = document.getElementsByClassName(className)
       res(Array.from(projectDescriptionArea))
   })
 }
