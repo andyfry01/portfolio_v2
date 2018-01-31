@@ -13,6 +13,7 @@ function getNameLetters() {
 }
 
 function startLogoAnimation(time, letterIndex) {
+  let nameLetters = getNameLetters()
   let curTime = Date.now()
   logoAnimation = requestAnimationFrame(() => {revealLetters(curTime, nameLetters, 0)})
 }
