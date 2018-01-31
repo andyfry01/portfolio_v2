@@ -99,6 +99,7 @@ function activatePictureTogglers(){
           let left = 0
           let right = 1
           button.addEventListener('click', () => {
+            console.log('clicking a pic scroller');
             if (buttonIndex === right) {
               scrollPictures(screenShotImages[pictureSet], 'right')
             }
@@ -170,6 +171,7 @@ function addEventListeners(selectorsArray, descriptionPanels) {
   selectorsArray.forEach((group, arrIndex) => {
     group.forEach((selector, selIndex) => {
       selector.addEventListener('click', () => {
+        console.log('clicking a section selector');
         let panel = descriptionPanels[arrIndex][selIndex]
         if (panel.classList.contains('onBottom')) {
           descriptionPanels[arrIndex].forEach((panel, index) => {
