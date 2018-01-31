@@ -1,8 +1,13 @@
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function(event) {
+  // console.log("DOM fully loaded and parsed");
   startLogoAnimation()
+  activateScrollListener()
+});
+
+
+window.onload = function(){
   activateSectionTogglers()
   activatePictureTogglers()
-  activateScrollListener()
 }
 
 let logoAnimation = undefined
