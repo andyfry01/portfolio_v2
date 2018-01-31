@@ -13,13 +13,13 @@ function getNameLetters() {
 
 function startLogoAnimation(time, letterIndex) {
   let nameLetters = getNameLetters()
-  if (window.sessionStorage.getItem('afrydevLogoAnimationTriggered') === "true") {
-    console.log(nameLetters);
-    nameLetters.forEach(letter => letter.classList.add('display'))
-  } else {
+  // if (window.sessionStorage.getItem('afrydevLogoAnimationTriggered') === "true") {
+  //   console.log(nameLetters);
+  //   nameLetters.forEach(letter => letter.classList.add('display'))
+  // } else {
     let curTime = Date.now()
     logoAnimation = requestAnimationFrame(() => {revealLetters(curTime, nameLetters, 0)})
-  }
+  // }
 }
 
 // timing for animation triggers in MS
