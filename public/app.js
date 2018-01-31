@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // console.log("DOM fully loaded and parsed");
   startLogoAnimation()
   activateScrollListener()
+  activateSectionTogglers()
+  activatePictureTogglers()
 });
 
 
 window.onload = function(){
-  activateSectionTogglers()
-  activatePictureTogglers()
 }
 
 let logoAnimation = undefined
