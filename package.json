@@ -25,6 +25,13 @@
     }
   },
   "dependencies": {
-    "blazy": "^1.8.2"
+    "blazy": "^1.8.2",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "response-time": "^2.3.2",
+    "serve-favicon": "^2.4.5"
   }
 }
