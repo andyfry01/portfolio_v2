@@ -6,10 +6,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   activatePictureTogglers()
 });
 
-
-window.onload = function(){
-}
-
 let logoAnimation = undefined
 
 function getNameLetters() {
@@ -17,14 +13,8 @@ function getNameLetters() {
 }
 
 function startLogoAnimation(time, letterIndex) {
-  let nameLetters = getNameLetters()
-  // if (window.sessionStorage.getItem('afrydevLogoAnimationTriggered') === "true") {
-  //   console.log(nameLetters);
-  //   nameLetters.forEach(letter => letter.classList.add('display'))
-  // } else {
-    let curTime = Date.now()
-    logoAnimation = requestAnimationFrame(() => {revealLetters(curTime, nameLetters, 0)})
-  // }
+  let curTime = Date.now()
+  logoAnimation = requestAnimationFrame(() => {revealLetters(curTime, nameLetters, 0)})
 }
 
 // timing for animation triggers in MS
@@ -80,36 +70,35 @@ function activateAnimation(className, animationName) {
 
 function activatePictureTogglers(){
   // get dom nodes from projectScreenshot section
-  getSection('.projectArea__projectScreenshot')
-    .then(screenshotAreas => {
-      // get the images in that section
-      let screenShotImages = screenshotAreas.map(screenshotArea => {
-        return Array.from(screenshotArea.children).filter((elem) => {
-          return elem.className.indexOf('projectArea__img') > -1
-        })
-      })
-      // get the navigator controls in that section
-      let screenShotNavigators = screenshotAreas.map(screenshotArea => {
-        return Array.from(screenshotArea.children).filter(elem => elem.className.indexOf('screenshotNavigation') > -1)
-      })
-      // loop through screenshot navigator controls
-      screenShotNavigators.forEach((navigatorSet, pictureSet) => {
-        // assign appropriate listener to each button to scroll between images
-        Array.from(navigatorSet[0].children).forEach((button, buttonIndex) => {
-          let left = 0
-          let right = 1
-          button.addEventListener('click', () => {
-            console.log('clicking a pic scroller');
-            if (buttonIndex === right) {
-              scrollPictures(screenShotImages[pictureSet], 'right')
-            }
-            if (buttonIndex === left) {
-              scrollPictures(screenShotImages[pictureSet], 'left')
-            }
-          })
-        })
+  let screenshotAreas = getSection('projectArea__projectScreenshot')
+
+  // get the images in that section
+  let screenShotImages = screenshotAreas.map(screenshotArea => {
+    return Array.from(screenshotArea.children).filter((elem) => {
+      return elem.className.indexOf('projectArea__img') > -1
+    })
+  })
+  // get the navigator controls in that section
+  let screenShotNavigators = screenshotAreas.map(screenshotArea => {
+    return Array.from(screenshotArea.children).filter(elem => elem.className.indexOf('screenshotNavigation') > -1)
+  })
+  // loop through screenshot navigator controls
+  screenShotNavigators.forEach((navigatorSet, pictureSet) => {
+    // assign appropriate listener to each button to scroll between images
+    Array.from(navigatorSet[0].children).forEach((button, buttonIndex) => {
+      let left = 0
+      let right = 1
+      button.addEventListener('click', () => {
+        console.log('clicking a pic scroller');
+        if (buttonIndex === right) {
+          scrollPictures(screenShotImages[pictureSet], 'right')
+        }
+        if (buttonIndex === left) {
+          scrollPictures(screenShotImages[pictureSet], 'left')
+        }
       })
     })
+  })
 }
 
 function scrollPictures(picArray, direction) {
@@ -148,23 +137,18 @@ function toggleClass(oldClass, newClass, element) {
 }
 
 function activateSectionTogglers() {
-  getSection('.projectArea__projectDescription')
-    .then(projectDescriptionAreas => {
-      let descriptionSelectors = projectDescriptionAreas.map(project => {
-        return Array.from(project.children[0].children)
-      })
-      let descriptionPanels = projectDescriptionAreas.map(project => {
-        return Array.from(project.children[1].children)
-      })
-      addEventListeners(descriptionSelectors, descriptionPanels)
-    })
+  let projectDescriptionAreas = getSection('projectArea__projectDescription')
+  let descriptionSelectors = projectDescriptionAreas.map(project => {
+    return Array.from(project.children[0].children)
+  })
+  let descriptionPanels = projectDescriptionAreas.map(project => {
+    return Array.from(project.children[1].children)
+  })
+  addEventListeners(descriptionSelectors, descriptionPanels)
 }
 
 function getSection(className){
-  return new Promise((res, rej) => {
-    let projectDescriptionArea = document.getElementsByClassName(className)
-      res(Array.from(projectDescriptionArea))
-  })
+  return Array.from(document.getElementsByClassName(className))
 }
 
 function addEventListeners(selectorsArray, descriptionPanels) {
