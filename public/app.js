@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   // console.log("DOM fully loaded and parsed");
+  initLazyLoading()
   startLogoAnimation()
   activateScrollListener()
   activateSectionTogglers()
@@ -170,4 +171,26 @@ function addEventListeners(selectorsArray, descriptionPanels) {
       })
     })
   })
+}
+
+function initLazyLoading(){
+  (function() {
+    // Initialize
+    var bLazy = new Blazy({
+        loadInvisible: true,
+        success: function(ele){
+          console.log('loaded', ele);
+            // Image has loaded
+            // Do your business here
+        }
+      , error: function(ele, msg){
+            if(msg === 'missing'){
+                // Data-src is missing
+            }
+            else if(msg === 'invalid'){
+                // Data-src is invalid
+            }
+        }
+    });
+  })()
 }

@@ -336,28 +336,7 @@
       <img class="b-lazy" src="./img/blank.gif" data-src="./img/projects/citibike/full/3.png" alt="citibike screenshot 3">
     </a>
 
-    <script src="./app.js"></script>
     <script src="../scripts/blazy/blazy.min.js"></script>
-    <script>
-    ;(function() {
-      // Initialize
-      var bLazy = new Blazy({
-          loadInvisible: true,
-          success: function(ele){
-              // Image has loaded
-              // Do your business here
-          }
-        , error: function(ele, msg){
-              if(msg === 'missing'){
-                  // Data-src is missing
-              }
-              else if(msg === 'invalid'){
-                  // Data-src is invalid
-              }
-          }
-      });
-    })();
-    </script>
-
+    <script src="./app.js"></script>
   </body>
 </html>
