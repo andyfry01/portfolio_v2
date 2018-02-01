@@ -26,7 +26,6 @@
 
 body {
   background: var(--white);
-  /* padding: 30px; */
   line-height: 1.6;
   font-size: 18px;
 }
@@ -43,7 +42,8 @@ main {
   @media (min-width: 100px) {
 
     header {
-      height: 100vh;
+      min-height: 48rem;
+      max-height: 100vh;
       width: auto;
       padding: 30px;
     }
@@ -57,10 +57,6 @@ main {
       grid-row-gap: 20px;
       grid-column-gap: 20px;
       padding-right: 25px;
-      /* font-family: 'Righteous', cursive; */
-      /* font-family: 'Fredoka One', cursive; */
-      /* font-family: 'Monoton', cursive; */
-      /* font-family: 'Fascinate', cursive; */
       font-family: 'Audiowide', cursive;
     }
 
@@ -83,7 +79,7 @@ main {
       color: var(--orange);
       margin: 0 auto;
       width: 65%;
-      font-size: 10vw;
+      font-size: 8vw;
     }
 
     .name__letter span {
@@ -97,7 +93,7 @@ main {
     }
 
     nav {
-      height: 8%;
+      height: 15%;
       width: 100%;
       font-family: 'Ubuntu', sans-serif;
       display: flex;
@@ -109,6 +105,7 @@ main {
 
     nav ul {
       list-style: none;
+      padding-left: 0;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto;
@@ -436,12 +433,15 @@ main {
   }
 
   @media (min-width: 768px) {
+    nav {
+      height: 15%;
+    }
     .name {
       grid-template-columns: repeat(4, 24%);
       grid-template-rows: repeat(4, 25%);
     }
     .name__letter--subTitle > p {
-      font-size: 6vw;
+      font-size: 4vw;
     }
     main {
       background: url('../img/bg/mountain-2.jpeg');
@@ -485,7 +485,7 @@ main {
 
   @media (min-width: 992px) {
     .name__letter--subTitle > p {
-      font-size: 5vw;
+      font-size: 4vw;
     }
     .projectArea__projectName {
       grid-row-start: 1;
