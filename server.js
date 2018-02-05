@@ -3,8 +3,9 @@ var express  = require('express');
 // static file compression middleware
 var compress = require('compression');
 // middleware that allows you to parse request body, json, etc.
-var bodyParser = require('body-parser');
-// middleware to allow the general use of PUT and DELETE verbs
+express.json() 
+express.urlencoded()
+
 var methodOverride = require('method-override');
 // logging middleware
 var morgan  = require('morgan');
@@ -18,7 +19,6 @@ var app = express();
 app.use(morgan('dev'));
 app.use(responseTime());
 
-app.use(bodyParser());
 app.use(methodOverride());
 
 app.use(compress());
