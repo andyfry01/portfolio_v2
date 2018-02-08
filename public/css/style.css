@@ -192,7 +192,7 @@ main {
     .projectArea__projectContainer {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: 5rem auto auto;
+      grid-template-rows: repeat(3, auto);
       grid-row-gap: 30px;
       height: auto;
       width: 100%;
@@ -204,20 +204,47 @@ main {
       background: var(--white);
     }
 
+    .projectArea__projectHeader {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50% 50%;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      border-bottom: 1px solid var(--black);
+    }
+
     .projectArea__projectName {
       font-size: 6vw;
       text-align: center;
       width: 100%;
-      border-bottom: 1px solid var(--black);
       color: var(--altDarkBlue);
-      /* background: var(--orange); */
-
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 1;
       grid-row-end: 2;
-
     }
+
+    .projectArea__projectLinks {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    .projectArea__projectLinks > * {
+      text-align: center;
+    }
+
+    .projectArea__projectLinks > *:nth-child(even) {
+      margin-top: 0;
+    }
+    
+
 
     .projectArea__projectScreenshot {
       display: grid;
@@ -495,10 +522,9 @@ main {
     }
     .projectArea__projectContainer {
       grid-template-columns: 60% 1fr;
-      grid-template-rows: 8vw 1fr;
+      grid-template-rows: repeat(2, auto);
       grid-column-gap: 30px;
       height: auto;
-
     }
     .projectArea__projectScreenshot {
       grid-row-start: 2;
